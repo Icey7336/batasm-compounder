@@ -1,7 +1,10 @@
+ - Requirements
+Nodejs (tested with v16.14.0)
+
 **_Installation:_**
 
-yarn
-Edit .env.example -> .env (replacing variables with your own)
+ 1. yarn 
+ 2. Edit .env.example -> .env (replacing variables with your own)
 
 	    WEBSOCKET_URL = 'wss://' (websocket node use https://moralis.io/speedy-nodes/ to get one for free)
         DISCORD_WEB_HOOK_URL = '' (a websocket to a discord channel for your convenience, not required leave blank if not using)
@@ -26,4 +29,18 @@ Run: node batasm.js
 
 **_What this does_**
 
-You should have deposited LP tokens into the BFTM-FTM farm before running this. Every 10 minutes it will check if the pending BSM rewards are greater than a USD value you specify or the amount of BSM. If the conditions are met, it will claim the BSM rewards and then withdraw them (50% penalty). Once withdrawn, it will then sell BSM to FTM on SpookySwap. Here you can choose to stop or zap the FTM gained back into the BFTM-FTM farm.
+ 1. You should have deposited LP tokens into the BFTM-FTM farm before
+    running this. 
+    
+ 2. Every 10 minutes it will check if the pending BSM
+    rewards are greater than a USD value you specify or the amount of
+    BSM
+    
+ 3. If the conditions are met, it will claim the BSM rewards and
+    then withdraw them (50% penalty)
+    
+ 4. Once withdrawn, it will then sell
+    BSM to FTM on SpookySwap
+    
+ 5. If USE_ZAPPER is true, it will Zap back the amount of FTM that BSM was previously sold for back into the BFTM-FTM farm
+
