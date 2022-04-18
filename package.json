@@ -1,0 +1,19 @@
+{
+  "name": "BatasmCompounder",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "Compound BSM rewards",
+  "main": "batasm.js",
+  "author": "Schwippy",
+  "license": "MIT",
+  "private": true,
+  "dependencies": {
+    "axios": "^0.25.0",
+    "chalk": "^5.0.0",
+    "discord-webhook-node": "^1.1.8",
+    "dotenv": "^16.0.0",
+    "ethers": "^5.5.4",
+    "log-timestamp": "^0.3.0",
+    "web3-providers-ws": "^1.7.0"
+  }
+}
